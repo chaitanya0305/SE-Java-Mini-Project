@@ -7,12 +7,12 @@
  *
  * @author rudra
  */
-public class ServerFrame extends javax.swing.JFrame {
+public class ServerPage extends javax.swing.JFrame {
 
     /**
      * Creates new form ServerFrame
      */
-    public ServerFrame() {
+    public ServerPage() {
         initComponents();
     }
 
@@ -68,7 +68,7 @@ public class ServerFrame extends javax.swing.JFrame {
         jList1.setBackground(new java.awt.Color(37, 27, 55));
         jList1.setForeground(new java.awt.Color(255, 183, 3));
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Demo 1", "Demo 2", "Demo 3", "Demo 4", "Demo 5", "Demo 6" };
+            String[] strings = { "Demo 1", "Demo 2", "Demo 3", "Demo 4", "Demo 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -142,20 +142,21 @@ public class ServerFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ServerFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ServerPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ServerFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ServerPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ServerFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ServerPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ServerFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ServerPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ServerFrame().setVisible(true);
+                new ServerPage().setVisible(true);
             }
         });
     }
