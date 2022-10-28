@@ -7,12 +7,12 @@
  *
  * @author rudra
  */
-public class UploadDownload extends javax.swing.JFrame {
+public class SearchPage extends javax.swing.JFrame {
 
     /**
      * Creates new form UploadDownload
      */
-    public UploadDownload() {
+    public SearchPage() {
         initComponents();
     }
 
@@ -71,6 +71,11 @@ public class UploadDownload extends javax.swing.JFrame {
         GoBack.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         GoBack.setForeground(new java.awt.Color(255, 255, 255));
         GoBack.setText("Back");
+        GoBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GoBackMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -197,11 +202,19 @@ public class UploadDownload extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NotesActionPerformed
-        ClientServerA csa = new ClientServerA();
+        ClientServer csa = new ClientServer();
         csa.setVisible(true);
         csa.pack();
         csa.setLocationRelativeTo(null);
     }//GEN-LAST:event_NotesActionPerformed
+
+    private void GoBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GoBackMouseClicked
+                Details det = new Details();
+                det.setVisible(true);
+                det.pack();
+                det.setLocationRelativeTo(null);
+                det.setDefaultCloseOperation(Register.EXIT_ON_CLOSE);
+    }//GEN-LAST:event_GoBackMouseClicked
 
     /**
      * @param args the command line arguments
@@ -220,20 +233,21 @@ public class UploadDownload extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UploadDownload.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SearchPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UploadDownload.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SearchPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UploadDownload.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SearchPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UploadDownload.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SearchPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UploadDownload().setVisible(true);
+                new SearchPage().setVisible(true);
             }
         });
     }
